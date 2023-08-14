@@ -1,6 +1,6 @@
 "use client";
 
-import { useCountContext } from "@/app/context";
+import { useCountContext } from "@/context/context";
 import CustomImage from "@/components/image";
 import { ProductType } from "@/interfaces";
 import { Dialog } from "@headlessui/react";

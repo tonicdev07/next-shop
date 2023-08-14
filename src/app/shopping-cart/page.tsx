@@ -6,7 +6,7 @@ import { StarIcon as StarIconOutline } from "@heroicons/react/24/outline";
 import { StarIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { useCountContext } from "../context";
+import { useCountContext } from "../../context/context";
 
 interface CountContextType {
   count: ProductType[]; 

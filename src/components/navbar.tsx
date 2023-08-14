@@ -6,7 +6,7 @@ import logo from "../assets/logo.png";
 
 import Link from "next/link";
 import { ProductType } from "@/interfaces";
-import { useCountContext } from "@/app/context";
+import { useCountContext } from "@/context/context";
 interface CountContextType {
   count: [ProductType[]];
 }

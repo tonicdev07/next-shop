@@ -1,5 +1,4 @@
-"use client";
-
+"use client"
 import { ProductType } from "@/interfaces";
 import { FC, ReactNode, createContext, useContext, useState } from "react";
 
