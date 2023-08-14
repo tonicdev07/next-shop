@@ -9,7 +9,7 @@ const Product: FC<{ product: ProductType }> = ({ product }) => {
   return (
     <section className="body-font my-3">
       <Link href={`/product/${product.id}`}>
-      <div className=" max-w-[234px] md:max-w-[240px] lg:max-w-[230px]  mx-auto rounded-md  hover:scale-105 transition-transform ease-out duration-200 border border-cyan-400 p-1  flex flex-wrap ">
+      <div className=" max-w-[254px] md:max-w-[240px] lg:max-w-[230px]  mx-auto rounded-md  hover:scale-105 transition-transform ease-out duration-200 border border-cyan-400 p-1  flex flex-wrap ">
         <div className=" flex flex-col  h-[400px]  ">
           <a className=" relative flex-1 ">
             <CustomImage product={product} fill/>

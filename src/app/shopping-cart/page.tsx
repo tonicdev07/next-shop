@@ -9,8 +9,8 @@ import { useEffect, useState } from "react";
 import { useCountContext } from "../../context/context";
 
 interface CountContextType {
-  count: ProductType[]; 
-  setCount: (newCount: ProductType[]) => void; 
+  count: ProductType[];
+  setCount: (newCount: ProductType[]) => void;
 }
 const ShoppingCart = () => {
   const [total, setTotal] = useState<number>(0);
@@ -79,8 +79,8 @@ const ShoppingCart = () => {
                   key={product.id}
                   className="justify-between mb-6 rounded-lg bg-white p-6 shadow-md sm:flex sm:justify-start"
                 >
-                  <div className="relative w-52">
-                    <CustomImage product={product} fill />
+                  <div className=" md:w-52 w-20">
+                    <CustomImage product={product} />
                   </div>
                   <div className="sm:ml-4 sm:flex sm:w-full gap-x-4 sm:justify-between">
                     <div className="mt-5 sm:mt-0">
@@ -129,7 +129,6 @@ const ShoppingCart = () => {
                           className="cursor-pointer rounded-l bg-gray-100 py-1 px-3.5 duration-100 hover:bg-blue-500 hover:text-blue-50"
                           onClick={() => handleDecrement(product.id)}
                         >
-                        
                           -
                         </span>
                         <input
@@ -142,7 +141,6 @@ const ShoppingCart = () => {
                           className="cursor-pointer rounded-r bg-gray-100 py-1 px-3 duration-100 hover:bg-blue-500 hover:text-blue-50"
                           onClick={() => handleIncrement(product.id)}
                         >
-                       
                           +
                         </span>
                       </div>

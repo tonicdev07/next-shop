@@ -7,9 +7,10 @@ import { FC, useState } from "react";
 interface Props {
   product: ProductType;
   fill?: boolean;
+  custom?: boolean;
 }
 
-const CustomImage: FC<Props> = ({ product, fill }) => {
+const CustomImage: FC<Props> = ({ product, fill, custom }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   return (
@@ -19,7 +20,20 @@ const CustomImage: FC<Props> = ({ product, fill }) => {
           src={product.image}
           alt={product.title}
           fill
-          className={`object-contain duration-700 ease-in-out group-hover:opacity-75 ${
+          className={`object-contain  duration-700 ease-in-out group-hover:opacity-75 ${
+            isLoading
+              ? "scale-110 blur-2xl grayscale"
+              : "scale-100 blur-0 grayscale-0"
+          }}`}
+          onLoadingComplete={() => setIsLoading(false)}
+        />
+      ) : custom ? (
+        <Image
+          src={product.image}
+          alt={product.title}
+          width={400}
+          height={1000}
+          className={`object-contain sm:w-6 md:w-72 duration-700 ease-in-out group-hover:opacity-75 ${
             isLoading
               ? "scale-110 blur-2xl grayscale"
               : "scale-100 blur-0 grayscale-0"
@@ -32,7 +46,7 @@ const CustomImage: FC<Props> = ({ product, fill }) => {
           alt={product.title}
           width={400}
           height={1000}
-          className={`object-contain duration-700 ease-in-out group-hover:opacity-75 ${
+          className={`object-contain sm:w-6 md:w-24 duration-700 ease-in-out group-hover:opacity-75 ${
             isLoading
               ? "scale-110 blur-2xl grayscale"
               : "scale-100 blur-0 grayscale-0"
