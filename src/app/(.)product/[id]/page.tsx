@@ -9,11 +9,13 @@ import { StarIcon } from "@heroicons/react/24/solid";
 import { useParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
-
+interface CountContextType {
+  setCount: (newCount: ProductType[]) => void; 
+}
 const ProductDetailedPage = () => {
   const [loading, setLoading] = useState(false);
   const [product, setProduct] = useState<ProductType>();
-  const {  setCount } = useCountContext();
+  const {  setCount } = useCountContext() as CountContextType;
 
   const [isOpen, setIsOpen] = useState(true);
 

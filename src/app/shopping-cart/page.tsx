@@ -9,8 +9,8 @@ import { useEffect, useState } from "react";
 import { useCountContext } from "../context";
 
 interface CountContextType {
-  count: ProductType[]; // Update the type to just ProductType[]
-  setCount: (newCount: ProductType[]) => void; // Update the argument type
+  count: ProductType[]; 
+  setCount: (newCount: ProductType[]) => void; 
 }
 const ShoppingCart = () => {
   const [total, setTotal] = useState<number>(0);
@@ -129,8 +129,8 @@ const ShoppingCart = () => {
                           className="cursor-pointer rounded-l bg-gray-100 py-1 px-3.5 duration-100 hover:bg-blue-500 hover:text-blue-50"
                           onClick={() => handleDecrement(product.id)}
                         >
-                          {" "}
-                          -{" "}
+                        
+                          -
                         </span>
                         <input
                           className="h-8 w-8 border bg-white text-center text-xs outline-none"
@@ -142,8 +142,8 @@ const ShoppingCart = () => {
                           className="cursor-pointer rounded-r bg-gray-100 py-1 px-3 duration-100 hover:bg-blue-500 hover:text-blue-50"
                           onClick={() => handleIncrement(product.id)}
                         >
-                          {" "}
-                          +{" "}
+                       
+                          +
                         </span>
                       </div>
                       <div className="flex items-center space-x-4">
@@ -239,7 +239,7 @@ const ShoppingCart = () => {
               Shopping cart is empty
             </h1>
             <p className="text-slate-600 mt-5 lg:text-lg">
-              The page you are looking for doesn't exist or <br />
+              The page you are looking for doesn&apos;t exist or <br />
               has been removed.
             </p>
             <Link href={"/"}>

@@ -1,7 +1,5 @@
-"use client";
-
-import { FC, ReactNode } from "react";
-import { Client, HydrationProvider } from "react-hydration-provider";
+import React, { FC, ReactNode } from "react";
+import { HydrationProvider, Client } from "react-hydration-provider";
 
 const Provider: FC<{ children: ReactNode }> = ({ children }) => {
   return (
